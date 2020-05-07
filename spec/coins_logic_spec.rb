@@ -10,7 +10,6 @@ describe('Change#currency') do
     change = Change.new()
     expect(change.currency(".09")).to(eq([1, 4]))
   end
-
 end
 # it("divides converted amoutn by the next largest coin amount 10 - dimes and gives the remainder") do 
 #   change = Change.new()

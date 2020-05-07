@@ -11,12 +11,16 @@ class Change
     # cents = [25, 10, 5, 1] # if we want to use an array to iterate through w/ a loop
     # coins = {:quarters => 25, }
     until (x < 1) 
+      if x >= 5
+        n = ( x/5).to_i
+        x %= 5
+        @cents.push(n)
+      end
       if x <= 4 #pennies
         c = (x/1).to_i
         x %= 1 
         @cents.push(c) 
       end
-      
       # if x >= 25 # quarters 
       #   q = (x / 25).to_i 
       #   x %= 25 # will change the value of x
