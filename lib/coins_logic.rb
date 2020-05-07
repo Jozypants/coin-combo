@@ -11,6 +11,15 @@ class Change
     # cents = [25, 10, 5, 1] # if we want to use an array to iterate through w/ a loop
     # coins = {:quarters => 25, }
     until (x < 1) 
+        # if x >= 25 # quarters 
+    #   q = (x / 25).to_i 
+    #   x %= 25 # will change the value of x
+    #   @cents.push(q)
+      if x >= 10 #dimes 
+        d = (x / 10).to_i
+        x %= 10
+        @cents.push(d)
+      end
       if x >= 5
         n = ( x/5).to_i
         x %= 5
@@ -21,20 +30,12 @@ class Change
         x %= 1 
         @cents.push(c) 
       end
-      # if x >= 25 # quarters 
-      #   q = (x / 25).to_i 
-      #   x %= 25 # will change the value of x
-      #   @cents.push(q)
+  
       #   # binding.pry
       # # elsif x % 25 == 0
       # #   q = (x/25).to_i
       # #   @cents.push(q)  
       # end 
-      # if x >= 10 #dimes 
-      #   d = (x / 10).to_i
-      #   x %= 10
-      #   @cents.push(d)
-      # end
     end
     @cents
   end
