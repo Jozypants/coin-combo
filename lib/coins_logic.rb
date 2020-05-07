@@ -10,23 +10,31 @@ class Change
     x = user_input.to_f * 100
     cents = []
     # until (x % < 1)
-    # until (x <= 1) ??  Jozy u right, it will never equal 0, it will always at least = 1. 
+    # until (x <= 1) # ?? Jozy u right, it will never equal 0, it will always at least = 1. 
       if x % 25 != 0 # quarters 
-        y = (x % 25).to_f
-        x = (x / 25).to_i  
-        cents.push(x)
-        # if y > 0 #dimes 
-        #   #do something
+        d = (x % 25) * 25
+        q = (x / 25).to_i  
+        cents.push(q)
+        # if d > 10 #dimes 
+        #   n = (d % 10) * 10
+        #   d = (d / 25).to_i
+        #   cents.push(d)
+        # elsif d < 10 || n > 0 #nickles
+
         # end
-      else (x % 25 == 0)
-        x = (x/25).to_i
-        cents.push(x)
+      else x % 25 == 0
+        q = (x/25).to_i
+        cents.push(q)  
       end 
     # end
     cents
+    # binding.pry
   end
 end
 
+
+# today == ChristmasEve ? (puts "Santa's On His Way!") : (puts "Snow")
+# ^^ shorthand if/else statements
 # how does change work?
 #   $1.56 in change = 6 Q, 1 N & 1 P
 #   $1.56 x 100 = 156
