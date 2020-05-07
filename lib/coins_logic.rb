@@ -2,12 +2,11 @@
 require('pry') 
 
 class Change 
-  def initialze(user_input, cents)
-    @user_input = user_input
+  def initialze()
     @cents = []
   end 
 
   def currency(user_input)
-    user_input * 100
+    user_input.to_f * 100
   end
 end

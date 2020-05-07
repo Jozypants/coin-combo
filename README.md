@@ -21,7 +21,7 @@ _This application will allow two users to insert an amount and the application w
 
 |   Behavior Description        |
 |-------------------------------|
-| 1. Lets user enter a currency amount to the 10th decimal place []|
+| 1. Lets user enter a currency amount to the 10th decimal place [X]|
 | 2. Method takes the currency amount & multiplys it by 100 []|
 | 3. Method divides it by the highest amount of change 25 - quarters remainder then moves to next step []|
 | 4. Method divides it by the next highest amount of change 10 - dimes remainder then moves to next step []|
